@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.contain{
+			margin:auto;
+			width: 800px;
+			height: 800px;
+			
+		}
+		img{
+			width: 800px;
+			height: 800px;
+			float: left;
+			overflow: hidden;
+		}
+		.input-con{
+			position: relative;
+			top: -500px;
+			left: 300px;
+			
+		}
+	</style>
+</head>
+<body>
+	<form method="post">
+		<div class="contain">
+			<img src="{{user_image}}">
+			<div class="input-con">
+				<label>用户名:</label><input type="text" name="number"><br>
+				
+				<input type="submit" value="提交" style="position: relative;left: 80px;margin-top: 80px;"><br>
+			</div>
+		</div>
+		{% for message in get_flashed_messages() %}
+			{{message}}
+		{% endfor %}
+
+	</form>
+</body>
+</html>

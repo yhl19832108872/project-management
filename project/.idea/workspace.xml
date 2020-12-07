@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="189157dd-45d7-471e-a066-bb689135f9e2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/123.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/keyi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/会话.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/将表单数据发送到模板.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/静态文件.py" afterDir="false" />
+      <change afterPath="D:/pyproject/大三上/66.py" afterDir="false" />
+      <change beforePath="D:/AndroidStudioProjects/MyApplication2/.idea/.name" beforeDir="false" />
+      <change beforePath="D:/AndroidStudioProjects/MyApplication2/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="D:/AndroidStudioProjects/MyApplication2/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="D:/AndroidStudioProjects/MyApplication2/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="D:/AndroidStudioProjects/MyApplication2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="D:/AndroidStudioProjects/MyApplication2/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="D:/AndroidStudioProjects/MyApplication2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="D:/plane/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="D:/plane/game.py" beforeDir="false" />
+      <change beforePath="D:/plane/plane_main.py" beforeDir="false" />
+      <change beforePath="D:/plane/plane_sprites.py" beforeDir="false" />
+      <change beforePath="D:/plane/tree.py" beforeDir="false" />
+      <change beforePath="D:/pyproject/.idea/pyproject.iml" beforeDir="false" afterPath="D:/pyproject/.idea/pyproject.iml" afterDir="false" />
+      <change beforePath="D:/pyproject/.idea/vcs.xml" beforeDir="false" afterPath="D:/pyproject/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="D:/pyproject/.idea/飞机大战.iml" beforeDir="false" />
+      <change beforePath="D:/pyproject/08.py" beforeDir="false" afterPath="D:/pyproject/08.py" afterDir="false" />
+      <change beforePath="D:/pyproject/1.py" beforeDir="false" afterPath="D:/pyproject/1.py" afterDir="false" />
+      <change beforePath="D:/pyproject/2.py" beforeDir="false" afterPath="D:/pyproject/2.py" afterDir="false" />
+      <change beforePath="D:/pyproject/hellow.py" beforeDir="false" afterPath="D:/pyproject/hellow.py" afterDir="false" />
+      <change beforePath="D:/pyproject/kaggle/666.py" beforeDir="false" afterPath="D:/pyproject/kaggle/666.py" afterDir="false" />
+      <change beforePath="D:/pyproject/kaggle/cart.py" beforeDir="false" afterPath="D:/pyproject/kaggle/cart.py" afterDir="false" />
+      <change beforePath="D:/pyproject/kaggle/kaggle第一次竞赛.py" beforeDir="false" afterPath="D:/pyproject/kaggle/kaggle第一次竞赛.py" afterDir="false" />
+      <change beforePath="D:/pyproject/kaggle/knn.py" beforeDir="false" afterPath="D:/pyproject/kaggle/knn.py" afterDir="false" />
+      <change beforePath="D:/pyproject/kaggle/knn2.py" beforeDir="false" afterPath="D:/pyproject/kaggle/knn2.py" afterDir="false" />
+      <change beforePath="D:/pyproject/kaggle/knn3.py" beforeDir="false" afterPath="D:/pyproject/kaggle/knn3.py" afterDir="false" />
+      <change beforePath="D:/pyproject/kaggle/knn4.py" beforeDir="false" afterPath="D:/pyproject/kaggle/knn4.py" afterDir="false" />
+      <change beforePath="D:/pyproject/kaggle/决策树.py" beforeDir="false" afterPath="D:/pyproject/kaggle/决策树.py" afterDir="false" />
+      <change beforePath="D:/pyproject/kaggle/对比.py" beforeDir="false" afterPath="D:/pyproject/kaggle/对比.py" afterDir="false" />
+      <change beforePath="D:/pyproject/kaggle/练习.py" beforeDir="false" afterPath="D:/pyproject/kaggle/练习.py" afterDir="false" />
+      <change beforePath="D:/pyproject/main.py" beforeDir="false" />
+      <change beforePath="D:/pyproject/plt练习/10.py" beforeDir="false" afterPath="D:/pyproject/plt练习/10.py" afterDir="false" />
+      <change beforePath="D:/pyproject/plt练习/plt练习3.py" beforeDir="false" afterPath="D:/pyproject/plt练习/plt练习3.py" afterDir="false" />
+      <change beforePath="D:/pyproject/plt练习/plt练习5.py" beforeDir="false" afterPath="D:/pyproject/plt练习/plt练习5.py" afterDir="false" />
+      <change beforePath="D:/pyproject/plt练习/plt练习6（柱状图）.py" beforeDir="false" afterPath="D:/pyproject/plt练习/plt练习6（柱状图）.py" afterDir="false" />
+      <change beforePath="D:/pyproject/plt练习/练习1.py" beforeDir="false" afterPath="D:/pyproject/plt练习/练习1.py" afterDir="false" />
+      <change beforePath="D:/pyproject/plt练习/练习2.py" beforeDir="false" afterPath="D:/pyproject/plt练习/练习2.py" afterDir="false" />
+      <change beforePath="D:/pyproject/plt练习/练习3.py" beforeDir="false" afterPath="D:/pyproject/plt练习/练习3.py" afterDir="false" />
+      <change beforePath="D:/pyproject/practice.py" beforeDir="false" />
+      <change beforePath="D:/pyproject/py02-2.py" beforeDir="false" afterPath="D:/pyproject/py02-2.py" afterDir="false" />
+      <change beforePath="D:/pyproject/py03-1.py" beforeDir="false" afterPath="D:/pyproject/py03-1.py" afterDir="false" />
+      <change beforePath="D:/pyproject/py03-2.py" beforeDir="false" afterPath="D:/pyproject/py03-2.py" afterDir="false" />
+      <change beforePath="D:/pyproject/py04-1.py" beforeDir="false" afterPath="D:/pyproject/py04-1.py" afterDir="false" />
+      <change beforePath="D:/pyproject/py04-2.py" beforeDir="false" afterPath="D:/pyproject/py04-2.py" afterDir="false" />
+      <change beforePath="D:/pyproject/py05.py" beforeDir="false" afterPath="D:/pyproject/py05.py" afterDir="false" />
+      <change beforePath="D:/pyproject/py10.py" beforeDir="false" afterPath="D:/pyproject/py10.py" afterDir="false" />
+      <change beforePath="D:/pyproject/py11.py" beforeDir="false" afterPath="D:/pyproject/py11.py" afterDir="false" />
+      <change beforePath="D:/pyproject/python02-1.py" beforeDir="false" afterPath="D:/pyproject/python02-1.py" afterDir="false" />
+      <change beforePath="D:/pyproject/python5.py" beforeDir="false" afterPath="D:/pyproject/python5.py" afterDir="false" />
+      <change beforePath="D:/pyproject/python第八次作业.py" beforeDir="false" />
+      <change beforePath="D:/pyproject/tanke.py" beforeDir="false" afterPath="D:/pyproject/tanke.py" afterDir="false" />
+      <change beforePath="D:/pyproject/test10.py" beforeDir="false" afterPath="D:/pyproject/test10.py" afterDir="false" />
+      <change beforePath="D:/pyproject/test11(me).py" beforeDir="false" afterPath="D:/pyproject/test11(me).py" afterDir="false" />
+      <change beforePath="D:/pyproject/人工智能04.py" beforeDir="false" />
+      <change beforePath="D:/pyproject/人工智能05.py" beforeDir="false" />
+      <change beforePath="D:/pyproject/人工智能作业/123.py" beforeDir="false" afterPath="D:/pyproject/人工智能作业/123.py" afterDir="false" />
+      <change beforePath="D:/pyproject/人工智能作业/人工智能06.py" beforeDir="false" afterPath="D:/pyproject/人工智能作业/人工智能06.py" afterDir="false" />
+      <change beforePath="D:/pyproject/人工智能作业/人工智能07.py" beforeDir="false" afterPath="D:/pyproject/人工智能作业/人工智能07.py" afterDir="false" />
+      <change beforePath="D:/pyproject/人工智能作业/人工智能08.py" beforeDir="false" afterPath="D:/pyproject/人工智能作业/人工智能08.py" afterDir="false" />
+      <change beforePath="D:/pyproject/任务4.py" beforeDir="false" />
+      <change beforePath="D:/pyproject/任务4（2）.py" beforeDir="false" afterPath="D:/pyproject/任务4（2）.py" afterDir="false" />
+      <change beforePath="D:/pyproject/任务5.py" beforeDir="false" afterPath="D:/pyproject/任务5.py" afterDir="false" />
+      <change beforePath="D:/pyproject/决策树练习.py" beforeDir="false" afterPath="D:/pyproject/决策树练习.py" afterDir="false" />
+      <change beforePath="D:/pyproject/大三上/123.py" beforeDir="false" afterPath="D:/pyproject/大三上/123.py" afterDir="false" />
+      <change beforePath="D:/pyproject/大三上/sklearn应用作业.py" beforeDir="false" afterPath="D:/pyproject/大三上/sklearn应用作业.py" afterDir="false" />
+      <change beforePath="D:/pyproject/大三上/测试.py" beforeDir="false" afterPath="D:/pyproject/大三上/测试.py" afterDir="false" />
+      <change beforePath="D:/pyproject/大三上/经典模型1.py" beforeDir="false" />
+      <change beforePath="D:/pyproject/大三上/经典模型2.2.py" beforeDir="false" afterPath="D:/pyproject/大三上/经典模型2.2.py" afterDir="false" />
+      <change beforePath="D:/pyproject/大三上/经典模型4.py" beforeDir="false" afterPath="D:/pyproject/大三上/经典模型4.py" afterDir="false" />
+      <change beforePath="D:/pyproject/大三上/经典模型7.py" beforeDir="false" afterPath="D:/pyproject/大三上/经典模型7.py" afterDir="false" />
+      <change beforePath="D:/pyproject/搞事情.py" beforeDir="false" />
+      <change beforePath="D:/pyproject/曹了.py" beforeDir="false" />
+      <change beforePath="D:/pyproject/机器学习01-3.py" beforeDir="false" />
+      <change beforePath="D:/pyproject/机器学习1.py" beforeDir="false" />
+      <change beforePath="D:/pyproject/第一次雪梨.py" beforeDir="false" afterPath="D:/pyproject/第一次雪梨.py" afterDir="false" />
+      <change beforePath="D:/pyproject/类和对象练习.py" beforeDir="false" afterPath="D:/pyproject/类和对象练习.py" afterDir="false" />
+      <change beforePath="D:/pyproject/练习.py" beforeDir="false" />
+      <change beforePath="D:/pyproject/网络编程/test1.py" beforeDir="false" afterPath="D:/pyproject/网络编程/test1.py" afterDir="false" />
+      <change beforePath="D:/pyproject/网络编程/接收数据.py" beforeDir="false" afterPath="D:/pyproject/网络编程/接收数据.py" afterDir="false" />
+      <change beforePath="D:/pyproject/课上练习.py" beforeDir="false" />
+      <change beforePath="D:/python/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="D:/python/123.py" beforeDir="false" />
+      <change beforePath="D:/python/hanoi.py" beforeDir="false" />
+      <change beforePath="D:/python/练习.py" beforeDir="false" />
+      <change beforePath="D:/python/雪梨1.py" beforeDir="false" />
+      <change beforePath="D:/机器学习工程/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="D:/项目管理仓库/project-management" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1099073135">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.19" value="3" />
+          <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.29" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="html" value="7" />
+          <entry key="py" value="11" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="7" />
+          <entry key="Python" value="11" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="5" />
+          <entry key="py" value="2241" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="5" />
+          <entry key="Python" value="2241" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/123.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="864">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/keyi.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="51" column="17" lean-forward="true" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#65#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="D:/" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/123.py" />
+        <option value="$PROJECT_DIR$/静态文件.py" />
+        <option value="$PROJECT_DIR$/将表单数据发送到模板.py" />
+        <option value="$PROJECT_DIR$/Cookies.py" />
+        <option value="$PROJECT_DIR$/会话.py" />
+        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/analise.html" />
+        <option value="$PROJECT_DIR$/4.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/keyi.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-15" />
+    <option name="y" value="-10" />
+    <option name="width" value="1940" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="666" type="b2602c69:ProjectViewProjectNode" />
+              <item name="666" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="666" type="b2602c69:ProjectViewProjectNode" />
+              <item name="666" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.keyi">
+    <configuration name="静态文件" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="666" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/静态文件.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="123" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="666" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/123.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Cookies" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="666" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cookies.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="将表单数据发送到模板" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="666" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/将表单数据发送到模板.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="会话" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="666" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/会话.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="666" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="keyi" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="666" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/keyi.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.123" />
+      <item itemvalue="Python.静态文件" />
+      <item itemvalue="Python.Cookies" />
+      <item itemvalue="Python.app" />
+      <item itemvalue="Python.keyi" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.keyi" />
+        <item itemvalue="Python.app" />
+        <item itemvalue="Python.Cookies" />
+        <item itemvalue="Python.静态文件" />
+        <item itemvalue="Python.123" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="189157dd-45d7-471e-a066-bb689135f9e2" name="Default Changelist" comment="" />
+      <created>1606960458402</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606960458402</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24966975" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Cookies.py" />
+    <entry file="file://$PROJECT_DIR$/将表单数据发送到模板.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/静态文件.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/会话.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="934">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="19" lean-forward="true" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.py" />
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/analise.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-351">
+          <caret line="47" column="40" lean-forward="true" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-918">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/123.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="51" column="17" lean-forward="true" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
