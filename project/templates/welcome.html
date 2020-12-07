@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home page</title>
+    <style>
+        * {
+            padding:0 auto;
+            margin: 0 auto;
+        }
+        .box {
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            font-size: 50px;
+            text-align: center;
+            opacity: 0.5;
+            background: url(./static/images/background.jpg) no-repeat;
+            background-size: cover;
+        }
+        .content{
+            color: #fff;
+            position: relative;
+            top: 150px;
+        }
+        a.button {
+            position: relative;
+            top: 200px;
+            text-decoration: none;
+            color: #fff;
+            border: 5px solid #fff;
+        }
+    </style>
+</head>
+<body>
+    <form method="get">
+        <div class="box">
+            <div class="content">Welcome to MitoA, a free web server for the annotation of metazoan mitochondrial genomes.</div>
+            <a href="/upload_file" class="button">Get Started</a>
+        </div>
+    </form>
+</body>
+</html>

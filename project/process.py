@@ -6,12 +6,19 @@ Created on Mon Nov 23 11:53:45 2020
 """
 
 
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Nov 23 11:53:45 2020
+
+@author: Samsung-PC
+"""
+
+
 import difflib
 import numpy as np
 from Bio.SeqUtils import GC
 from Bio import pairwise2
-from Bio.Seq import Seq 
-
+from Bio.Seq import Seq
 import re
 
 
@@ -100,6 +107,7 @@ def get_pro_atp8(seq,starts,ends,ref_index_list,Reading_box=0):
     for i in start_indexs:
         for j in end_indexs:
             if 100<j-i<170:
+                atp8=seq[i:j]
                 Flag=True
 
                 for indexs in ref_index_list:
@@ -110,6 +118,10 @@ def get_pro_atp8(seq,starts,ends,ref_index_list,Reading_box=0):
                     if i+1<indexs[1]<j+1:
                         Flag=False
                         break
+                for k in range(0,len(atp8)-3,3):
+                    for end in ends:
+                        if end==atp8[k:k+3]:
+                            Flag=False
                 if Flag==True:
                     probable_atp8.append(seq[i:j])
     return probable_atp8
@@ -120,9 +132,14 @@ def write_seq(ori_seq):
         f.write(ori_seq) 
 
 
-def main(seq_number):
 
-    # seq_number=g.enterbox(msg="请输入基因序列号",title="查找ATP8接口")
+   
+    
+
+def main(seq_number):
+#    seq_number=str(input("请输入基因序列号:"))
+
+     # seq_number=g.enterbox(msg="请输入基因序列号",title="查找ATP8接口")
     index_list=get_index_list('data.txt',seq_number)
     seq=get_seq('seq.txt')
     starts=['ata','atg','att','gtg']
@@ -210,10 +227,13 @@ def main(seq_number):
         print("atp8 on +  :",atp8_p)
         print("the atp8 index is :%d-%d"%(atp8_p_start+1,atp8_p_end))
         return atp8_p
+        
     else:
         print("atp8 on -  :",atp8_n)
         print("the atp8 index is :%d-%d"%(atp8_n_start+1,atp8_n_end))
         return atp8_n
+        
+
     
     
 

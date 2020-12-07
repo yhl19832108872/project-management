@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, flash,redirect
 from flask_sqlalchemy import SQLAlchemy
 import os
+import process
+
 base_dir = os.path.abspath(os.path.dirname(__file__))
 PEOPLE_FOLDER = os.path.join('static','people_photo')
 app = Flask(__name__)
@@ -11,8 +13,6 @@ app.config ['UPLOAD_FOLDER'] = PEOPLE_FOLDER
 app.config["SQLALCHEMY_COMMIT_ON_TEARDOWN"] = False
 
 db = SQLAlchemy(app)
-
-
 
 class User(db.Model):
     __tablename__ = 'users'
@@ -55,24 +55,27 @@ def index():
                 db.session.commit()
                 return render_template('index.html')
 
-    full_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'bg.jpg')
-    return render_template('index.html',Users=User.query.all(),user_image=full_filename)
+
+    return render_template('index.html')
 
 @app.route('/analise',methods=['GET','POST'])
 def analise():
     if request.method=='POST':
         number=request.form.get('number')
+        result=process.main(number)
+        flash(result)
+
     full_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'img.png')
     return render_template('analise.html',user_image=full_filename)
 
 @app.route('/fail',methods=['GET','POST'])
 def fail():
-    full_filename = os.path.join(app.config['UPLOAD_FOLDER'],'error.svg')
-    return render_template('fail2.html',user_image = full_filename)
+    # full_filename = os.path.join(app.config['UPLOAD_FOLDER'],'error.svg')
+    return render_template('fail2.html')
 if __name__ == '__main__':
     app.run()
     db.create_all()
-    #
+
     # for user in User.query.all():
     #     print(user.user_name,user.user_email,user.user_password)
 
