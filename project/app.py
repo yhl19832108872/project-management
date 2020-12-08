@@ -62,6 +62,7 @@ def index():
 def analise():
     if request.method=='POST':
         number=request.form.get('number')
+        process.write_gbk('data.txt',number)
         result=process.main(number)
         flash(result)
 

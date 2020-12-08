@@ -33,6 +33,13 @@ def score(seq1,seq2):
     alignments = pairwise2.align.globalxx(seq1,seq2)
     return alignments[0].score
 
+def write_gbk(filename,seq_number):
+    with open(filename,'r') as f:
+        data=f.read()
+    all_information=re.search(seq_number+'(.*?)//',str(data),re.S).group()
+    gene_formation=re.search('.*ORIGIN',all_information,re.S).group()
+    with open('gene_information.gbk','w') as f:
+        f.write(gene_formation)
 
 def get_index_list(filename,seq_number):
     

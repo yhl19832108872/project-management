@@ -1,0 +1,441 @@
+NC_035255              14193 bp    DNA     circular INV 13-SEP-2017
+DEFINITION  Macrostomum lignano mitochondrion, complete genome.
+ACCESSION   NC_035255
+VERSION     NC_035255.1
+DBLINK      BioProject: PRJNA394490
+KEYWORDS    RefSeq.
+SOURCE      mitochondrion Macrostomum lignano
+  ORGANISM  Macrostomum lignano
+            Eukaryota; Metazoa; Spiralia; Lophotrochozoa; Platyhelminthes;
+            Rhabditophora; Macrostomorpha; Macrostomida; Macrostomidae;
+            Macrostomum.
+REFERENCE   1  (bases 1 to 14193)
+  AUTHORS   Egger,B., Bachmann,L. and Fromm,B.
+  TITLE     Atp8 is in the ground pattern of flatworm mitochondrial genomes
+  JOURNAL   BMC Genomics 18 (1), 414 (2017)
+   PUBMED   28549457
+  REMARK    Publication Status: Online-Only
+REFERENCE   2  (bases 1 to 14193)
+  CONSRTM   NCBI Genome Project
+  TITLE     Direct Submission
+  JOURNAL   Submitted (14-JUL-2017) National Center for Biotechnology
+            Information, NIH, Bethesda, MD 20894, USA
+REFERENCE   3  (bases 1 to 14193)
+  AUTHORS   Egger,B., Bachmann,L. and Fromm,B.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (09-MAY-2017) Institute of Zoology, University of
+            Innsbruck, Technikerstr. 25, Innsbruck 6020, Austria
+COMMENT     REVIEWED REFSEQ: This record has been curated by NCBI staff. The
+            reference sequence is identical to MF078637.
+            
+            ##Assembly-Data-START##
+            Assembly Method       :: MITObim v. 1.8
+            Coverage              :: 440x
+            Sequencing Technology :: Sanger dideoxy sequencing; Illumina
+            ##Assembly-Data-END##
+            COMPLETENESS: full length.
+FEATURES             Location/Qualifiers
+     source          1..14193
+                     /organism="Macrostomum lignano"
+                     /organelle="mitochondrion"
+                     /mol_type="genomic DNA"
+                     /db_xref="taxon:282301"
+     gene            <1..1548
+                     /gene="COX1"
+                     /locus_tag="CGW75_mgp01"
+                     /db_xref="GeneID:33352620"
+     CDS             <1..1548
+                     /gene="COX1"
+                     /locus_tag="CGW75_mgp01"
+                     /note="start codon not determined"
+                     /codon_start=1
+                     /transl_table=9
+                     /product="cytochrome c oxidase subunit I"
+                     /protein_id="YP_009391115.1"
+                     /db_xref="GeneID:33352620"
+                     /translation="ILRWFGSTNHKDIGTLYLVFGVWSGFVGTAMSNIIRLELTIPSG
+                     VLHENNLYNSLITAHGLIMIFFFVMPILIGGFGNWLVPPMLSSVDMIFPRLNNMSFWL
+                     VVPAFLLLLNSFFIEFGAATGWTVYPPLSGNISQAGPSVDLAIFSLHVAGVSSILASI
+                     NFIATVVKCGGVGQGWSRIPLFVWSVFITVWLLILSLPVFAGGLTMLLTDRNFNTSFF
+                     DPAGGGDPILFQHIFWFFGHPEVYILILPAFGIVSHVVSFVGGKRGVFGHLSMILAML
+                     GIGFLGFIVWAHHMFTVGLDVDTRAYFTAATMIIAVPTGIKVFSWLSTMVGAPISNFF
+                     SEPLVLWVFGFIFLFTSGGVTGIVLSNASLDLALHDTYYVVAHFHYVLSMGAVFGIFL
+                     GIIFWWPLFTGVIMDKDLLISHFWVMFVGVNLTFFPQHFLGLSGMPRRYCDYLDSYSF
+                     WNGVSSFGAGISSVGVVWFLFIIWDSFVSERLFLWVNSSDLSSEWNHFFYPLSWHTYT
+                     ENSIFLI"
+     gene            <1560..2660
+                     /gene="CYTB"
+                     /locus_tag="CGW75_mgp02"
+                     /db_xref="GeneID:33352608"
+     CDS             <1560..2660
+                     /gene="CYTB"
+                     /locus_tag="CGW75_mgp02"
+                     /note="start codon not determined"
+                     /codon_start=1
+                     /transl_table=9
+                     /product="cytochrome b"
+                     /protein_id="YP_009391116.1"
+                     /db_xref="GeneID:33352608"
+                     /translation="IYFFNRNLPLLSLLDLGTPVNISYFWNFGSLLGLFCGVQIFSGV
+                     LLSMHYQNSIEMAFFSVNLSIQNEVFLGWFFHNVHSSGASFFFVFLYCHLFRGLYYGG
+                     FNQINIWMSGVTILLFSMALAFLGYVLPWGQMSFWGATVITNLFSAIPYVGEDVVHVL
+                     WGGYGVAGPTLNRFFSLHFLVPFLMVMVAFFHVFIFLHVKGSSNPLGGPINQFLKIEF
+                     FPYFVVKDFFGIYLIFFVFFYFCLLNPRLLLDSENFIEANSLVTPVHIQPEWYFLSSY
+                     AILRSIPNKFGGVVALAFSVLFFYFFPFFFQNLYNNSFFNNNNVKFYFWFWLSSAIVL
+                     CYVGASPVEYPWVSIGIVFTFFYFSGFFFLLF"
+     gene            2661..2720
+                     /locus_tag="CGW75_mgt01"
+                     /db_xref="GeneID:33352609"
+     tRNA            2661..2720
+                     /locus_tag="CGW75_mgt01"
+                     /product="tRNA-His"
+                     /db_xref="GeneID:33352609"
+     gene            2721..2775
+                     /locus_tag="CGW75_mgt02"
+                     /db_xref="GeneID:33352621"
+     tRNA            2721..2775
+                     /locus_tag="CGW75_mgt02"
+                     /product="tRNA-Gln"
+                     /db_xref="GeneID:33352621"
+     gene            2776..2837
+                     /locus_tag="CGW75_mgt03"
+                     /db_xref="GeneID:33352622"
+     tRNA            2776..2837
+                     /locus_tag="CGW75_mgt03"
+                     /product="tRNA-Trp"
+                     /db_xref="GeneID:33352622"
+     gene            2838..2896
+                     /locus_tag="CGW75_mgt04"
+                     /db_xref="GeneID:33352623"
+     tRNA            2838..2896
+                     /locus_tag="CGW75_mgt04"
+                     /product="tRNA-Thr"
+                     /db_xref="GeneID:33352623"
+     gene            2897..2959
+                     /locus_tag="CGW75_mgt05"
+                     /db_xref="GeneID:33352624"
+     tRNA            2897..2959
+                     /locus_tag="CGW75_mgt05"
+                     /product="tRNA-Pro"
+                     /db_xref="GeneID:33352624"
+     gene            2969..3835
+                     /locus_tag="CGW75_mgr02"
+                     /db_xref="GeneID:33352625"
+     rRNA            2969..3835
+                     /locus_tag="CGW75_mgr02"
+                     /product="16S ribosomal RNA"
+                     /db_xref="GeneID:33352625"
+     gene            3846..3905
+                     /locus_tag="CGW75_mgt06"
+                     /db_xref="GeneID:33352626"
+     tRNA            3846..3905
+                     /locus_tag="CGW75_mgt06"
+                     /product="tRNA-Val"
+                     /db_xref="GeneID:33352626"
+     gene            3906..3965
+                     /locus_tag="CGW75_mgt07"
+                     /db_xref="GeneID:33352627"
+     tRNA            3906..3965
+                     /locus_tag="CGW75_mgt07"
+                     /product="tRNA-Glu"
+                     /db_xref="GeneID:33352627"
+     gene            3963..4015
+                     /locus_tag="CGW75_mgt08"
+                     /db_xref="GeneID:33352628"
+     tRNA            3963..4015
+                     /locus_tag="CGW75_mgt08"
+                     /product="tRNA-Ser"
+                     /db_xref="GeneID:33352628"
+     gene            <4015..4887
+                     /gene="ND1"
+                     /locus_tag="CGW75_mgp13"
+                     /db_xref="GeneID:33352629"
+     CDS             <4015..4887
+                     /gene="ND1"
+                     /locus_tag="CGW75_mgp13"
+                     /note="start codon not determined"
+                     /codon_start=1
+                     /transl_table=9
+                     /product="NADH dehydrogenase subunit 1"
+                     /protein_id="YP_009391117.1"
+                     /db_xref="GeneID:33352629"
+                     /translation="LVVGLLNLLIVFGGVAFYVLLERKVLSYSQNRKGPNKVGVLGIL
+                     QSIADALKLLAKSFGSLLEVSLLEFFLFPFFSLLIMINFWLFFTSFFSYYSISLGVLI
+                     IIVLLSLGVYPVLGSGWGSNSKYSVIGAVRGAAQSISYEVVLVFLLMWSLMFLFEKNN
+                     LVFSDVNLGIFFFLIFFLWVVSILCETNRAPFDFAEGESELVSGFNIEYGSFPFTLLF
+                     LSEYGVILFLSVFSGVYFFGGVVGVFWGWFISVIFLWVRSSFPRFRYDFLMSLCWGIF
+                     LPLTFVIFFIPNLI"
+     gene            <4913..5590
+                     /gene="ATP6"
+                     /locus_tag="CGW75_mgp12"
+                     /db_xref="GeneID:33352610"
+     CDS             <4913..5590
+                     /gene="ATP6"
+                     /locus_tag="CGW75_mgp12"
+                     /note="start codon not determined"
+                     /codon_start=1
+                     /transl_table=9
+                     /product="ATP synthase F0 subunit 6"
+                     /protein_id="YP_009391118.1"
+                     /db_xref="GeneID:33352610"
+                     /translation="LFSGVDYFFFNFSVFQGIFLIVSSFWILYIFFFNYFLNFGLSYL
+                     IYNIFFSVFSAGQDLSSNNFKGWFYFMWGFFLIVTWSNFCGLLPYVYGVTTNFYFVLF
+                     FSLWGWTCLIISSFIWNMVGFVSHFCPLGAPTLLGWFLSLVEVVSVGIRPGTLTLRLV
+                     ANMTTGHILIGLITLSSCYLFFNSYFLSFVCLIFLFFYLVFEVAICFIQGNVYFMLFQ
+                     SYTSEHL"
+     gene            <5601..>5951
+                     /gene="ND3"
+                     /locus_tag="CGW75_mgp11"
+                     /db_xref="GeneID:33352611"
+     CDS             <5601..>5951
+                     /gene="ND3"
+                     /locus_tag="CGW75_mgp11"
+                     /note="start and stop codons not determined"
+                     /codon_start=1
+                     /transl_table=9
+                     /product="NADH dehydrogenase subunit 3"
+                     /protein_id="YP_009391119.1"
+                     /db_xref="GeneID:33352611"
+                     /translation="IFINIFFCFSSLIIFGGLVFLGVFLNGLNNFLGRREMSSGFECG
+                     FDGKNVSRVPFSLRFFLILVLFLVFDVEIVLVLQFPFLSFGSSVFYLLSLNLFLVVLF
+                     LGTIEEWRRGFLNWV"
+     gene            <5986..6774
+                     /gene="COX3"
+                     /locus_tag="CGW75_mgp10"
+                     /db_xref="GeneID:33352612"
+     CDS             <5986..6774
+                     /gene="COX3"
+                     /locus_tag="CGW75_mgp10"
+                     /note="start codon not determined"
+                     /codon_start=1
+                     /transl_table=9
+                     /product="cytochrome c oxidase subunit III"
+                     /protein_id="YP_009391120.1"
+                     /db_xref="GeneID:33352612"
+                     /translation="VLNVPGYSVWPLIGSIGAFLITSSSVFWWHNGFSWLFLVSFFVV
+                     LGTMFFWWRDIVNEGFLGNHTVSFNSYLQSGIILFILSEVVFFGSFFWGFFHMCWAPA
+                     EELGFCWPPYSFEEVIIDPFSVPLLNTIILLSSGVTVTACHFFILVSENNNNWFLGAV
+                     FWGVTIFLGVVFLFLQVEEYAESYLSFNSSVYGSAFFILTGFHGLHVTIGAIALSVVF
+                     FRFLTKSFSNFDHVGFEGAAWYWHFVDVVWLFLFIFVYWLGAPV"
+     gene            6777..7214
+                     /gene="ND6"
+                     /locus_tag="CGW75_mgp09"
+                     /db_xref="GeneID:33352613"
+     CDS             6777..7214
+                     /gene="ND6"
+                     /locus_tag="CGW75_mgp09"
+                     /codon_start=1
+                     /transl_table=9
+                     /product="NADH dehydrogenase subunit 6"
+                     /protein_id="YP_009391121.1"
+                     /db_xref="GeneID:33352613"
+                     /translation="MGEIFFLVVFLNIGFLFFFNSFLYIIGSFFLICLGSSGLVSFYF
+                     LGWLGIVLFLVFVGGILVIVFYLGIYGNYYSFSNQFFSLIYLIFFTFPSIFITQNNSF
+                     SFGEYSDFYLNFLVFVLISGFLFLVLFSISKMVGYGSSLRSYF"
+     gene            7213..7272
+                     /locus_tag="CGW75_mgt09"
+                     /db_xref="GeneID:33352614"
+     tRNA            7213..7272
+                     /locus_tag="CGW75_mgt09"
+                     /product="tRNA-Met"
+                     /db_xref="GeneID:33352614"
+     gene            7273..7334
+                     /locus_tag="CGW75_mgt10"
+                     /db_xref="GeneID:33352630"
+     tRNA            7273..7334
+                     /locus_tag="CGW75_mgt10"
+                     /product="tRNA-Ala"
+                     /db_xref="GeneID:33352630"
+     gene            7335..7395
+                     /locus_tag="CGW75_mgt11"
+                     /db_xref="GeneID:33352631"
+     tRNA            7335..7395
+                     /locus_tag="CGW75_mgt11"
+                     /product="tRNA-Gly"
+                     /db_xref="GeneID:33352631"
+     gene            <7396..8070
+                     /gene="COX2"
+                     /locus_tag="CGW75_mgp08"
+                     /db_xref="GeneID:33352632"
+     CDS             <7396..8070
+                     /gene="COX2"
+                     /locus_tag="CGW75_mgp08"
+                     /note="start codon not determined"
+                     /codon_start=1
+                     /transl_table=9
+                     /product="cytochrome c oxidase subunit II"
+                     /protein_id="YP_009391122.1"
+                     /db_xref="GeneID:33352632"
+                     /translation="IVSYLVLGNYFFNGLNFFMGNLIMFHDFLLIICYFVLFFILSLM
+                     LSMVVFSGSYFNNLGNVVLEVVWTVIPSLILLGLVEPSLTLLYISEAFSFNNGQVLKV
+                     VGHQWYWSYNSDLINSVVQDSTDYDSYLITSDLVSGDFRLLEVDLPLVVLANVPLYFF
+                     VSSSDVIHSFALPSLGLKVDAFPGRLNVGVSGGVSVGCYWGQCSEICGANHAFMPIGM
+                     EALIYF"
+     gene            8069..8121
+                     /locus_tag="CGW75_mgt12"
+                     /db_xref="GeneID:33352615"
+     tRNA            8069..8121
+                     /locus_tag="CGW75_mgt12"
+                     /product="tRNA-Lys"
+                     /db_xref="GeneID:33352615"
+     gene            8122..8183
+                     /locus_tag="CGW75_mgt13"
+                     /db_xref="GeneID:33352633"
+     tRNA            8122..8183
+                     /locus_tag="CGW75_mgt13"
+                     /product="tRNA-Phe"
+                     /db_xref="GeneID:33352633"
+     gene            8181..9071
+                     /gene="ND2"
+                     /locus_tag="CGW75_mgp07"
+                     /db_xref="GeneID:33352634"
+     CDS             8181..9071
+                     /gene="ND2"
+                     /locus_tag="CGW75_mgp07"
+                     /codon_start=1
+                     /transl_table=9
+                     /product="NADH dehydrogenase subunit 2"
+                     /protein_id="YP_009391123.1"
+                     /db_xref="GeneID:33352634"
+                     /translation="MFSFNYFSIFLFLSFISISMNNAFFTWCILEVYSLIFLLFVFTS
+                     QYFFENKNSFVYFGLLNLFFSVVLIFSLVNDIYFLSFLSLVGKMGSFPMMEWVINFVN
+                     NSSWEVSWYFFSVNKIIPVFFVFEYLNNNVFLVLAYFFFNTFISIQNAFLVNSFHSLI
+                     SWSAIGGTGFFVFLVNFSSNFFLFLGLLFIYSLNLFVIFFNINNLNHYFWLIILLFGI
+                     PPFSMFVFKVSVFSVFINFYGIFLNYFFLFFFFFMGVSYFYFFFKESQNLLIQNTQFT
+                     FLGNFWFFLVLFFCFSVLVF"
+     gene            9072..9133
+                     /locus_tag="CGW75_mgt14"
+                     /db_xref="GeneID:33352616"
+     tRNA            9072..9133
+                     /locus_tag="CGW75_mgt14"
+                     /product="tRNA-Ile"
+                     /db_xref="GeneID:33352616"
+     gene            9133..9390
+                     /gene="ND4L"
+                     /locus_tag="CGW75_mgp06"
+                     /db_xref="GeneID:33352635"
+     CDS             9133..9390
+                     /gene="ND4L"
+                     /locus_tag="CGW75_mgp06"
+                     /codon_start=1
+                     /transl_table=9
+                     /product="NADH dehydrogenase subunit 4L"
+                     /protein_id="YP_009391124.1"
+                     /db_xref="GeneID:33352635"
+                     /translation="MFINFSFLLVFFIFIFFFKVYSIFYLVIFFEVVSLINSVFFIFL
+                     VSSSIMIFYVFLSFVVVEAALNFSILVIFSRQSGGDLLQLN"
+     gene            9390..9443
+                     /locus_tag="CGW75_mgt15"
+                     /db_xref="GeneID:33352617"
+     tRNA            9390..9443
+                     /locus_tag="CGW75_mgt15"
+                     /product="tRNA-Ser"
+                     /db_xref="GeneID:33352617"
+     gene            <10166..11392
+                     /gene="ND4"
+                     /locus_tag="CGW75_mgp05"
+                     /db_xref="GeneID:33352636"
+     CDS             <10166..11392
+                     /gene="ND4"
+                     /locus_tag="CGW75_mgp05"
+                     /note="start codon not determined"
+                     /codon_start=1
+                     /transl_table=9
+                     /product="NADH dehydrogenase subunit 4"
+                     /protein_id="YP_009391125.1"
+                     /db_xref="GeneID:33352636"
+                     /translation="LIESLFILSSVFFLFAPSFVGIGIVVFLFFCFLGVNNENFSFLN
+                     IMFVFFSIWILYFMSNCSLDVAYWVYFSFFVVFFSFYYTNNLILFFIFFEMSLIPTFY
+                     LVVKSSSPKRSVASNYLVLYTFLGSLPLLISIVIFGLNNSFVYFYFFPYLFSGFLYFF
+                     ILAFLIKLPVFYFHLWLPKAHVEASTEGSMILAGVLLKLGSYGLLLFCCWFNPNVFLS
+                     VVVFFGGIIAGLFSLISNDLKKLAAYSSIIHMSYMVFSSFGVVLISVWGVIFLSVGHG
+                     FISAGMFFLISLIYNFTGNRNIFFLGGVGNNYSFLLFFCGLLLIMNSSPPISISFIGE
+                     IFMFIGGSLIFGFWNLVIIVLLNLLGGLLSVVFFLHLYHGNVENNSFYINFREGNVIF
+                     IFLIFSVFSYLLSSFL"
+     gene            11391..11448
+                     /locus_tag="CGW75_mgt16"
+                     /db_xref="GeneID:33352618"
+     tRNA            11391..11448
+                     /locus_tag="CGW75_mgt16"
+                     /product="tRNA-Asp"
+                     /db_xref="GeneID:33352618"
+     gene            11449..11508
+                     /locus_tag="CGW75_mgt17"
+                     /db_xref="GeneID:33352637"
+     tRNA            11449..11508
+                     /locus_tag="CGW75_mgt17"
+                     /product="tRNA-Arg"
+                     /db_xref="GeneID:33352637"
+     gene            11450..12188
+                     /locus_tag="CGW75_mgr01"
+                     /db_xref="GeneID:33352638"
+     rRNA            11450..12188
+                     /locus_tag="CGW75_mgr01"
+                     /product="12S ribosomal RNA"
+                     /db_xref="GeneID:33352638"
+     gene            12205..13761
+                     /gene="ND5"
+                     /locus_tag="CGW75_mgp04"
+                     /db_xref="GeneID:33352639"
+     CDS             12205..13761
+                     /gene="ND5"
+                     /locus_tag="CGW75_mgp04"
+                     /codon_start=1
+                     /transl_table=9
+                     /product="NADH dehydrogenase subunit 5"
+                     /protein_id="YP_009391126.1"
+                     /db_xref="GeneID:33352639"
+                     /translation="MGNIFFFFSLFFFYLGFSNISVNFKVFEFNSIFSFVFFFDWISF
+                     VFLGVLMVILGSVVYFSCYYMGEELIRGRGFIFVVFSFVVAMGFLIISGDWISLIIGW
+                     DWLGITSFFLVCYYNSDSSWSGGLKTYFTNRLGDGIFLFLLSNLFIYFIFSNFYLGTF
+                     YLFLIILLSQTKSAQLPFSSWLPAAMAAPTPVSALVHSSTLVTAGVYILIRSGSILGG
+                     FNWYLGGVGLLTLFVGSFSACGSFDLKKIVAFSTLSHLGFMVMSLSSVCVDYSFFHLI
+                     VHACFKALLFISVGMLILTNNHSQDFRQVGFSFNNLFFIWVSLVSLTSLCGFPFFSGF
+                     FSKDFTLEMFFWSFNPLFYFLFFFSIFFSVFYSVRLINAIVSIQWSNLVKEYSIFNIF
+                     YMIFLLLSSVVIGVVFSGWVNNLQLISGNFLFKFLVYFFLLGGVLFFYQHFNGLISSS
+                     IFFLDSLGGGIPNNLTNNFWLFYNNVDQGVLPFFSERLSAENFMSFSKVIQVNLFLYF
+                     WGFFIIFYFF"
+     gene            13760..13819
+                     /locus_tag="CGW75_mgt18"
+                     /db_xref="GeneID:33352619"
+     tRNA            13760..13819
+                     /locus_tag="CGW75_mgt18"
+                     /product="tRNA-Asn"
+                     /db_xref="GeneID:33352619"
+     gene            13819..13880
+                     /locus_tag="CGW75_mgt19"
+                     /db_xref="GeneID:33352640"
+     tRNA            13819..13880
+                     /locus_tag="CGW75_mgt19"
+                     /product="tRNA-Tyr"
+                     /db_xref="GeneID:33352640"
+     gene            13881..13940
+                     /locus_tag="CGW75_mgt20"
+                     /db_xref="GeneID:33352641"
+     tRNA            13881..13940
+                     /locus_tag="CGW75_mgt20"
+                     /product="tRNA-Leu"
+                     /db_xref="GeneID:33352641"
+     gene            13941..13999
+                     /locus_tag="CGW75_mgt21"
+                     /db_xref="GeneID:33352642"
+     tRNA            13941..13999
+                     /locus_tag="CGW75_mgt21"
+                     /product="tRNA-Cys"
+                     /db_xref="GeneID:33352642"
+     gene            <14013..14180
+                     /gene="ATP8"
+                     /locus_tag="CGW75_mgp03"
+                     /db_xref="GeneID:33352643"
+     CDS             <14013..14180
+                     /gene="ATP8"
+                     /locus_tag="CGW75_mgp03"
+                     /note="start codon not determined"
+                     /codon_start=1
+                     /transl_table=9
+                     /product="ATP synthase F0 subunit 8"
+                     /protein_id="YP_009391127.1"
+                     /db_xref="GeneID:33352643"
+                     /translation="IPQLSSFGIFSFYLVIISSLILLSIVILSFVFSNRVDQVYFENS
+                     SFSGGVSFFWF"
+ORIGIN
