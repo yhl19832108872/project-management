@@ -2,11 +2,59 @@
 <html>
 <head>
 	<title></title>
+	<style type="text/css">
+		body{
+			background-color:rgb(211,211,211);
+		}
+		.center{
+			text-align: center;
+			margin: auto;
+			width: 500px;
+			height: 500px;
+			background-color: rgb(255,255,255);
+		}
+		h2{
+			text-align: center;
+			margin-top: 150px;
+		}
+		img{
+			margin-top: 50px;
+		}
+		p{
+			text-align: center;
+			opacity: 0.5;
+		}
+		.link{
+			margin-top: 20px;
+			
+			height: 50px;
+		}
+		.container{
+			line-height: 50px;
+			float: left;
+			margin-left: 125px;
+			background-color: green;
+			border-radius: 20%;
+		}
+		a{
+    		text-decoration: none;
+    		color:white;
+		}
+	</style>
 </head>
 <body>
-	<a href="{{ url_for('index') }}" rel="external nofollow" >点此重新登录</a>
-	<script type="text/javascript">
-		alert('邮箱或者密码错误')
-	</script>
+	<div class="center">
+		<img src="./static/images/error.svg" width="120" >
+		<h2>用户名或密码错误</h2>
+		<p>你可以返回上一页重试，或者找回密码</p>
+		<div class="link">
+			<div class="container">
+				<a href="{{ url_for('index') }}">返回首页</a>
+			</div>
+			<div class="container">
+				<a href="">找回密码</a>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

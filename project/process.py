@@ -1,91 +1,33 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Nov 23 11:53:45 2020
-
-@author: Samsung-PC
-"""
-
-
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Nov 23 11:53:45 2020
-
-@author: Samsung-PC
-"""
-
-
-import difflib
 import numpy as np
 from Bio.SeqUtils import GC
-from Bio import pairwise2
-from Bio.Seq import Seq
+from Bio import pairwise2, SeqIO
 import re
-
-
-
-
-def string_similar(s1, s2):
-    return difflib.SequenceMatcher(None, s1, s2).quick_ratio()
+from visualization import visualize, visualize2
 
 def score(seq1,seq2):
-    seq1=Seq(seq1)
-    seq2=Seq(seq2)
     alignments = pairwise2.align.globalxx(seq1,seq2)
     return alignments[0].score
 
-def write_gbk(filename,seq_number):
+def write_gbk(seq_number):
+    filename = 'MitoGenPlatyhelminthes.gbk'
     with open(filename,'r') as f:
         data=f.read()
-    all_information=re.search(seq_number+'(.*?)//',str(data),re.S).group()
-    gene_formation=re.search('.*ORIGIN',all_information,re.S).group()
+    information=re.search('LOCUS       '+seq_number+'(.*?)//',str(data),re.S).group()
     with open('gene_information.gbk','w') as f:
-        f.write(gene_formation)
+        f.write(information)
 
-def get_index_list(filename,seq_number):
-    
-    with open(filename,'r') as f:
-        data=f.read()
-    all_information=re.search(seq_number+'(.*?)//',str(data),re.S).group()
-    gene_formation=re.search('.*ORIGIN',all_information,re.S).group()
-    seq_information=re.findall('ORIGIN(.*?)//',all_information,re.S)[0]
-    write_seq(seq_information)
-    
-
-        
-    index_ori_list=re.findall('gene (.*)\n',gene_formation)
+def get_index_list(record):
+    filename = 'gene_information.gbk'
+    record = SeqIO.read(filename, 'genbank')
+    seq = record.seq
     index_list=[]
-    for index in index_ori_list:   
-        index_list.append(re.findall(r'\d+',index))
-    index_list=np.array(index_list,dtype=int)
- 
-    #判断ATP8是否已经标注
-    atp8_exist=gene_formation.find('ATP8')
-    if atp8_exist!=-1:
-        #如果ATP8已经标注出，将ATP8的在链上的索引去除
-        atp8_index=re.findall('gene\s+<?\d+\.\..?\d+\n.*?=(.*?)\n',gene_formation).index('"ATP8"')
-#        gene_formation=gene_formation[:atp8_exist-58]+gene_formation[atp8_exist:]
-#        index_list=np.vstack((index_list[:atp8_index,:],index_list[atp8_index+1:,:]))
-
-        a=index_list[:atp8_index,:]
-        b=index_list[atp8_index+1:,:]
-
-        index_list=np.vstack((a,b))
-#        print(index_list)
-    return index_list
-
-def get_seq(filename):
+    for feature in record.features:
+        if feature.type == 'gene':
+            location = feature.location
+            index_list.append([location.start, location.end])
+    index_list = np.array(index_list, dtype=int)
     
-    with open(filename,'r') as f:
-        lines =f.readlines()
-    seq=''
-    
-    for line in lines:
-        line=line.strip()
-        temp=line.split(' ')
-        temp.pop(0)
-        line=''.join(temp)
-        seq+=line
-    return seq
+    return seq, index_list
 
 def get_pro_atp8(seq,starts,ends,ref_index_list,Reading_box=0):
     start_indexs=[]
@@ -133,25 +75,27 @@ def get_pro_atp8(seq,starts,ends,ref_index_list,Reading_box=0):
                     probable_atp8.append(seq[i:j])
     return probable_atp8
 
-
-def write_seq(ori_seq):
-    with open("seq.txt","w") as f:
-        f.write(ori_seq) 
-
-
-
-   
-    
-
 def main(seq_number):
-#    seq_number=str(input("请输入基因序列号:"))
-
-     # seq_number=g.enterbox(msg="请输入基因序列号",title="查找ATP8接口")
-    index_list=get_index_list('data.txt',seq_number)
-    seq=get_seq('seq.txt')
-    starts=['ata','atg','att','gtg']
-    ends=['taa','tag']
-    reverse_complement_seq=str(Seq(seq).reverse_complement())
+    filename = 'gene_information.gbk'
+    record = SeqIO.read(filename, 'genbank')
+    # 判断ATP8是否已经标注
+    for feature in record.features:
+        if feature.type == 'gene':
+            location = feature.location
+            start = location.start
+            end = location.end
+            if feature.qualifiers.get('gene'):
+                if 'ATP8' in feature.qualifiers['gene']:
+                    atp8 = record.seq[start:end]
+                    strand = feature.strand
+                    flag = '+' if strand == 1 else '-'
+                    visualize2(record)
+                    return "ATP8 on "+flag+"  :", str(atp8), 'The ATP8 index is :'+str(start+1)+'-'+str(end)
+    # 获得非编码基因
+    seq, index_list = get_index_list(record)
+    starts=['ATA','ATG','ATT','GTG']
+    ends=['TAA','TAG']
+    reverse_complement_seq=seq.reverse_complement()
     ref_index_list_p=np.zeros(index_list.shape)
     for i in range(len(index_list)):
         ref_index_list_p[i][0]=index_list[i][0]+5
@@ -166,46 +110,36 @@ def main(seq_number):
         ref_index_list_n[i][0]=index_list_n[i][0]+5
         ref_index_list_n[i][1]=index_list_n[i][1]-5
     
-    references=['ataccacaattgtcaaggtttgggatttttagtttttatttagttattatttcatctttgattttattatcaattgttattttgagttttgttttttctaatcgtgttgatcaagtttatttcgaaaattcttctttttctgggggggttagttttttttgattttaa',
-            'atgccccagttaggaaaattgcctgttgtttttattttcgttttggtgggtttagtttttagtgttttaatgattgaagtttatgggagcccctggtttgggggtgagagggaattaagggggggtttaagggggaggggcgtggagcatccttgaaaaatttaa',
-           'atgcctcatatagcacctatttactgggctttggtatgtttgcttgtttggttttgaatgttagttatgttttctaagcgatgatttgggggctttgttgtttccttcaaagtttag',
-           'ataatgcctcatataagcccaataaattgaatttatttcctatgcattacactattttttattatttcatttaccaaaaatttttcctcttcttcaccatcagttacacctaattttcaaattattaaaaacaaaagtaaaataaaaatttttaaaaccaaatgataa',
-           'attaagttgcctcatatgagtcctataaattgactgtattttatatttatttttttttgtattatgttctcttttttatttttttttgattctaataataaagataatgatagaatattgcattttgtttctttaaaaaaaagtaattttaaatgataa',
-            'atgccgcattttagagatatttatgttatagtattatttgttattagaataattgtagttgtatgttttttagtgttgctttgatgaactaggaaaatggaaagtcttgacccggaagaagtggaaaattggattttaattt',
-            'attccacaaatagcacctattagatgattattattatttattattttttctattacatttattttattttgttctattaactattattcttatataccaaattcacctaaatctaatgaattaaaaaatatcaacttaaattcaataaattgaaaatgataa',
-            'atgccacaattagttccattttattttatgaatcaattaacatatggtttcttattaatgattctattattaattttattctcacaattctttttacctatgatcttaagattatatgtatctagattatttatttctaaattataa'
-           ]
+    # 读取参考序列
+    references = SeqIO.parse('reference.fa', 'fasta')
+    references = list(references)
     
-    
-
-    probable_atp8_p=[]
-    for i in range(3):
-        probable_atp8_p.extend(get_pro_atp8(seq,starts,ends,ref_index_list_p,i))
-    
-    
-    probable_atp8_n=[]
-    for i in range(3):
-        probable_atp8_n.extend(get_pro_atp8(reverse_complement_seq,starts,ends,ref_index_list_n,i))
-                
-    
-   
-
+    # 计算参考序列权重
     GC_content=[]
     for reference in references:
-        GC_content.append(1/GC(reference))
+        GC_content.append(1/GC(reference.seq))
     total=sum(GC_content)
     GC_weights=[]
     for gc in GC_content:
         GC_weights.append(gc/total)
+        
+    # 从非编码基因的六种阅读框中找到备选ATP8序列
+    probable_atp8_p=[]
+    for i in range(3):
+        probable_atp8_p.extend(get_pro_atp8(seq,starts,ends,ref_index_list_p,i))
     
+    probable_atp8_n=[]
+    for i in range(3):
+        probable_atp8_n.extend(get_pro_atp8(reverse_complement_seq,starts,ends,ref_index_list_n,i))
+    
+    # 备选序列与参考序列比对 计算得分
     similiars_p=[]
     for atp8 in probable_atp8_p:
         similiar=0
         i=0
         for reference in references:
-            similiar+=score(atp8,reference)*GC_weights[i]
+            similiar+=score(atp8,reference.seq.upper())*GC_weights[i]
             i+=1
-            
         similiars_p.append(similiar)
     
     similiars_n=[]
@@ -213,40 +147,33 @@ def main(seq_number):
         similiar=0
         i=0
         for reference in references:
-            similiar+=score(atp8,reference)*GC_weights[i]
+            similiar+=score(atp8,reference.seq.upper())*GC_weights[i]
             i+=1
         similiars_n.append(similiar)
     
-    
     atp8_p=probable_atp8_p[similiars_p.index(max(similiars_p))]
     atp8_p_start=seq.find(atp8_p)
-    atp8_p_end=atp8_p_start+len(atp8_p)
-
-    
+    atp8_p_end=atp8_p_start+len(atp8_p)    
     
     atp8_n=probable_atp8_n[similiars_n.index(max(similiars_n))]
-    reverse_complement=str(Seq(atp8_n).reverse_complement())
+    reverse_complement=atp8_n.reverse_complement()
     atp8_n_start=seq.find(reverse_complement)
     atp8_n_end=atp8_n_start+len(atp8_n)
-
     
     if max(similiars_p)>max(similiars_n):
-        print("atp8 on +  :",atp8_p)
-        print("the atp8 index is :%d-%d"%(atp8_p_start+1,atp8_p_end))
-        return atp8_p
-        
+        strand = 1
+        flag = '+'
+        atp8 = atp8_p
+        atp8_start = atp8_p_start
+        atp8_end = atp8_p_end
     else:
-        print("atp8 on -  :",atp8_n)
-        print("the atp8 index is :%d-%d"%(atp8_n_start+1,atp8_n_end))
-        return atp8_n
-        
+        strand = -1
+        flag = '-'
+        atp8 = atp8_n
+        atp8_start = atp8_n_start
+        atp8_end = atp8_n_end
+    visualize(record, atp8_start, atp8_end, strand)
+    return "ATP8 on "+flag+"  :", str(atp8), 'The ATP8 index is :'+str(atp8_start+1)+'-'+str(atp8_end)
 
     
     
-
-
-  
-
-
-
-
