@@ -89,7 +89,7 @@ def main(seq_number):
                     atp8 = record.seq[start:end]
                     strand = feature.strand
                     flag = '+' if strand == 1 else '-'
-                    visualize2(record)
+                    visualize2(filename)
                     return "ATP8 on "+flag+"  :", str(atp8), 'The ATP8 index is :'+str(start+1)+'-'+str(end)
     # 获得非编码基因
     seq, index_list = get_index_list(record)
@@ -150,17 +150,22 @@ def main(seq_number):
             similiar+=score(atp8,reference.seq.upper())*GC_weights[i]
             i+=1
         similiars_n.append(similiar)
+        
+    sp = sn = 0
+    if len(similiars_p) > 0:
+        atp8_p=probable_atp8_p[similiars_p.index(max(similiars_p))]
+        atp8_p_start=seq.find(atp8_p)
+        atp8_p_end=atp8_p_start+len(atp8_p)
+        sp = max(similiars_p)
+        
+    if len(similiars_n) > 0:
+        atp8_n=probable_atp8_n[similiars_n.index(max(similiars_n))]
+        reverse_complement=atp8_n.reverse_complement()
+        atp8_n_start=seq.find(reverse_complement)
+        atp8_n_end=atp8_n_start+len(atp8_n)
+        sn = max(similiars_n)
     
-    atp8_p=probable_atp8_p[similiars_p.index(max(similiars_p))]
-    atp8_p_start=seq.find(atp8_p)
-    atp8_p_end=atp8_p_start+len(atp8_p)    
-    
-    atp8_n=probable_atp8_n[similiars_n.index(max(similiars_n))]
-    reverse_complement=atp8_n.reverse_complement()
-    atp8_n_start=seq.find(reverse_complement)
-    atp8_n_end=atp8_n_start+len(atp8_n)
-    
-    if max(similiars_p)>max(similiars_n):
+    if sp > sn:
         strand = 1
         flag = '+'
         atp8 = atp8_p
