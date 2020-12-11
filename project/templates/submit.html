@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>upload_page</title>
+    <style type="text/css">
+        body {
+            background: #E6E6FA;
+        }
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .logo {
+            margin: 0 auto;
+            width: 220px;
+            height: 100px;
+            margin-top: 80px;
+            background: #F5F5F5;
+            text-align: center;
+        }
+        img {
+             display: float;
+             width: 100px;
+             margin-top: 10px;
+        }
+        span {
+            display: float;
+            position: relative;
+            bottom: 20px;
+            margin-left: 10px;
+            margin-top: 30px;
+            font-size: 30px;
+            color: #483D8B;
+        }
+        form {
+            width: 500px;
+            border: 1px solid rgba(0,0,0,0.5);
+            box-shadow: inset 0 0 15px rgba(0,0,0,0.3);
+            border-radius: 10px;
+            margin: 30px auto;
+            background: #B0C4DE;
+        }
+        form>div {
+            margin: 25px 0;
+            padding: 0 50px;
+        }
+        input[type='submit'],input[type='button']{
+            width: 100px;
+            height: 30px;
+            font-size: 15px;
+            border: 1px solid rgba(0,0,0,0.5);
+            color: white;
+            background: rgba(0,0,0,0.7);
+            border-radius: 5px;
+        }
+        form>div:last-child{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="./static/images/logo.jpg">
+        <span>MitoA</span>
+    </div>
+    <form action="/submit" method="post" enctype="multipart/form-data">
+        <div>
+            <div>
+                <b>Sequence id &nbsp;&nbsp;&nbsp;</b><input style="width:150px; height:20px" type="text" name="seqid"><br>
+            </div>
+            <div style="margin-top:30px">
+                <b>Upload files &nbsp;&nbsp;&nbsp;</b><input type="file"  name="seq">
+            </div>
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+</html>
