@@ -1,13 +1,13 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 import os
 import process
 from werkzeug.utils import secure_filename
-from visualization import visualize2
+from visualization import visualize3
 
 base_dir = os.path.abspath(os.path.dirname(__file__))
 PEOPLE_FOLDER = os.path.join('static','people_photo')
-UPLOAD_PATH = os.path.join(os.path.dirname(__file__), 'uploads')
+UPLOAD_PATH = os.path.dirname(__file__)
 app = Flask(__name__)
 app.secret_key="dasdas"
 
@@ -79,11 +79,12 @@ def submit():
             print(filename)
             seq.save(os.path.join(UPLOAD_PATH, filename))
             print('文件上传成功')
-            if filename.lower().endswith('.fasta'):
+            if filename.lower().endswith('.fasta') or filename.lower().endswith('.fa'):
                 print("fasta文件可视化")
-            if filename.lower().endswith('.gbk'):
-                visualize2(filename)
-            return redirect(url_for('login')) # 待修改
+            if filename.lower().endswith('.gbk') or filename.lower().endswith('.genbank'):
+                print('gbk文件可视化')
+                visualize3(filename)
+                return render_template('result1.html') # 待修改
         
     return render_template('submit.html')
 

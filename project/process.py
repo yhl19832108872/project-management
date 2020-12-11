@@ -2,7 +2,7 @@ import numpy as np
 from Bio.SeqUtils import GC
 from Bio import pairwise2, SeqIO
 import re
-from visualization import visualize, visualize2
+from visualization import visualize1, visualize2
 
 def score(seq1,seq2):
     alignments = pairwise2.align.globalxx(seq1,seq2)
@@ -50,7 +50,6 @@ def get_pro_atp8(seq,starts,ends,ref_index_list,Reading_box=0):
                     break
             if Flag==True:
                 end_indexs.append(i+3)
-        
     
     probable_atp8=[]
     for i in start_indexs:
@@ -89,7 +88,7 @@ def main(seq_number):
                     atp8 = record.seq[start:end]
                     strand = feature.strand
                     flag = '+' if strand == 1 else '-'
-                    visualize2(filename)
+                    visualize2(record)
                     return "ATP8 on "+flag+"  :", str(atp8), 'The ATP8 index is :'+str(start+1)+'-'+str(end)
     # 获得非编码基因
     seq, index_list = get_index_list(record)
@@ -177,7 +176,7 @@ def main(seq_number):
         atp8 = atp8_n
         atp8_start = atp8_n_start
         atp8_end = atp8_n_end
-    visualize(record, atp8_start, atp8_end, strand)
+    visualize1(record, atp8_start, atp8_end, strand)
     return "ATP8 on "+flag+"  :", str(atp8), 'The ATP8 index is :'+str(atp8_start+1)+'-'+str(atp8_end)
 
     

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>{% block title %}Home{% endblock %}</title>
+        {% block mycss %}
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            #header_wrap{
+                width: 100%;
+                height: 200px;
+            }
+            #header{
+                width: 1200px;
+                height: 200px;
+                margin: 0px auto;
+            }
+        </style>
+        {% endblock %}
+    </head>
+    <body>
+        <div id='header_wrap'>
+            <div id='header'>
+                <ul>
+                    <li><a href={{url_for('welcome')}} style="text-decoration:none; color:blue;">首页</a></li>
+                    <li><a href={{url_for('submit')}} style="text-decoration:none; color:blue;">提交</a></li>
+                    <li><a href={{url_for('login')}} style="text-decoration:none; color:blue;">登录/注册</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id='center_wrap'>
+            <div id='center'>
+                 {% block center %}
+
+                 {% endblock %}
+            </div>
+        </div>
+        <div id="footer_wrap">
+            <div id='footer'>
+                {% block footer %}
+
+                {% endblock %}
+            </div>
+        </div>
+        {% block myjs %}
+        
+        {% endblock %}
+    </body>
+
+</html>
