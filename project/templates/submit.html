@@ -15,18 +15,6 @@ ul,li,ol{list-style:none}
 em,i{font-style:normal}
 iframe{display:block}
 
-
-
-
-
-
-
-
-
-
-
-
-
 .clear{display:block;overflow:hidden;clear:both;height:0;line-height:0;font-size:0;}
 .cont{width:1200px;margin:0px auto;}
 .textcent{ text-align:center}
@@ -45,13 +33,13 @@ ul.nav-main span{display:inline-block;margin-left:18px;width:12px;height:9px; /*
 /*图标向下旋转*/
 .hover-down{transition-duration:.5s;transform:rotate(0);-webkit-transform:rotate(0)}
 /*导航条设置*/
-ul.nav-main>li{width:133px;height:100%;display:block;float:left;color:#483D8B;margin-right:1px;cursor:pointer;font-size: 20px;}
+ul.nav-main>li{width:133px;height:100%;display:block;float:left;color:#483D8B;margin-right:0px;cursor:pointer;font-size: 17px;}
 ul.nav-main>li:hover{background:#fff ; color:#be4355 }
 ul.nav-main>li:hover span{ /*background:url(images/sg3.jpg)  no-repeat center center;*/ z-index:100000 }
 /*隐藏盒子设置*/
 div.hidden-box{width:133px;position:absolute;display:none;background:#315565  top center;top:70px;filter:alpha(opacity=80); -moz-opacity:0.8; opacity:0.8;}
-.hidden-box>ul{list-style-type:none;color:#fff;cursor:pointer; padding-top:12px;padding-bottom:15px}
-.hidden-box>ul li{ line-height:30px; height:30px; font-weight:500}
+.hidden-box>ul{list-style-type:none;color:#fff;cursor:pointer;}
+.hidden-box>ul li{ line-height:40px; height:40px; font-weight:300; border-bottom:solid;}
 /*.hidden-box li:hover{background:#643519;color:#fff}*/
 
 /*隐藏盒子位置设置*/
@@ -136,6 +124,30 @@ body {
       }
 
 </style>
+    <script>
+        window.requestAnimFrame = (function() {
+          return (
+            window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            window.oRequestAnimationFrame ||
+            window.msRequestAnimationFrame ||
+            function(callback) {
+              window.setTimeout(callback);
+            }
+          );
+        });
+
+        function init(elemid) {
+          let canvas = document.getElementById(elemid),
+            c = canvas.getContext("2d"),
+            w = (canvas.width = window.innerWidth),
+            h = (canvas.height = window.innerHeight);
+          c.fillStyle = "#0066CC";
+          c.fillRect(0, 0, w, h);
+          return {c:c,canvas:canvas};
+        }
+    </script>
 <title>upload_page</title>
 </head>
 
@@ -147,37 +159,37 @@ body {
     <div class="nav"> 
       <!--导航条-->
       <ul class="nav-main">
-        <li style="position: relative;top: 1px;"><a href='/'>网站首页</a></li>
-        <li id="li-1">关于我们</li>
-        <li id="li-2">成功案例</li>
-        <li id="li-3">我们服务</li>
-        <li id="li-4">联系我们</li>
+        <li style="position: relative;top: 1px"><a href='/' style="font-size:17px;">Home Page</a></li>
+        <li id="li-1">About Us</li>
+        <li id="li-2">Good Case</li>
+        <li id="li-3">Our Service</li>
+        <li id="li-4">Contact Us</li>
       </ul>
       <!--隐藏盒子-->
       <div id="box-1" class="hidden-box hidden-loc-index">
         <ul>
-          <li>公司简介</li>
-          <li>公司荣誉</li>
+          <li>Company Profile</li>
+          <li>Company Glories</li>
         </ul>
       </div>
       <div id="box-2" class="hidden-box hidden-loc-us">
         <ul>
-          <li>ATP8注释</li>
-          <li>可视化基因</li>
+          <li>ATP8 Annotation</li>
+          <li>Gene Visualization</li>
           
         </ul>
       </div>
       <div id="box-3" class="hidden-box hidden-loc-info">
         <ul>
-          <li>发送结果至邮箱</li>
-          <li>数据库的使用</li>
+          <li>Send to Email</li>
+          <li>Database Usage</li>
           
         </ul>
       </div>
       <div id="box-4" class="hidden-box hidden-loc-info box04">
         <ul>
-          <li>联系我们</li>
-          <li>加入我们</li>
+          <li>Contact Us</li>
+          <li>Join Us</li>
         </ul>
       </div>
     </div>
@@ -203,8 +215,8 @@ body {
         </div>
     </form>
 
-    
-    
+    <canvas style=" width: 100%; height: 100%; position: absolute; top:-100px; z-index: -1;" id="canvas"></canvas>
+    <script type="text/JavaScript" src="{{ url_for('static',filename='script0.js') }}"></script>
     <script type="text/javascript" src="./static/main.js"></script> 
 </body>
 </html>

@@ -15,7 +15,7 @@
 		}
 		h2{
 			text-align: center;
-			margin-top: 150px;
+			margin-top: 100px;
 		}
 		img{
 			margin-top: 50px;
@@ -26,15 +26,19 @@
 		}
 		.link{
 			margin-top: 20px;
-			
 			height: 50px;
+			opacity: 0.8;
 		}
 		.container{
-			line-height: 50px;
+			width: 150px;
+			height: 30px;
+			line-height: 30px;
 			float: left;
-			margin-left: 125px;
-			background-color: green;
-			border-radius: 20%;
+			margin-left: 55px;
+			margin-top: 10px;
+			margin-right: 30px;
+			background-color: #483D8B;
+			border-radius: 40%;
 		}
 		a{
     		text-decoration: none;
@@ -45,14 +49,14 @@
 <body>
 	<div class="center">
 		<img src="./static/images/error.svg" width="120" >
-		<h2>用户名或密码错误</h2>
-		<p>你可以返回上一页重试，或者找回密码</p>
+		<h2>ERROR<br><h3>Incorrect username or password</h3></h2>
+		<p>You can go back to the previous page to try again,<br> or retrieve your password</p>
 		<div class="link">
 			<div class="container">
-				<a href="{{ url_for('login') }}">返回首页</a>
+				<a href="{{ url_for('login') }}">LOOKTG</a>
 			</div>
 			<div class="container">
-				<a href="">找回密码</a>
+				<a href="">Retrieve Password</a>
 			</div>
 		</div>
 	</div>
