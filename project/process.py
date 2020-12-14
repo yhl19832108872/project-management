@@ -6,19 +6,18 @@ from visualization import visualize1, visualize2
 
 def score(seq1,seq2):
     alignments = pairwise2.align.globalxx(seq1,seq2)
-    return alignments[0].score
+    return (alignments[0].score / alignments[0].end) * 100
+    # return alignments[0].score
 
 def write_gbk(seq_number):
     filename = 'MitoGenPlatyhelminthes.gbk'
-    with open(filename, 'r') as f:
+    with open(filename,'r') as f:
         data=f.read()
     information=re.search('LOCUS       '+seq_number+'(.*?)//',str(data),re.S).group()
-    with open('gene_information.gbk', 'w') as f:
+    with open('uploads\\gene_information.gbk','w') as f:
         f.write(information)
 
 def get_index_list(record):
-    filename = 'gene_information.gbk'
-    record = SeqIO.read(filename, 'genbank')
     seq = record.seq
     index_list=[]
     for feature in record.features:
@@ -59,23 +58,24 @@ def get_pro_atp8(seq,starts,ends,ref_index_list,Reading_box=0):
                 Flag=True
 
                 for indexs in ref_index_list:
-                    if i+1<indexs[0]<j+1:
+                    if i < indexs[0] < j:
                         Flag=False
                         break
                 for indexs in ref_index_list:
-                    if i+1<indexs[1]<j+1:
+                    if i < indexs[1]< j:
                         Flag=False
                         break
                 for k in range(0,len(atp8)-3,3):
                     for end in ends:
                         if end==atp8[k:k+3]:
                             Flag=False
+                
                 if Flag==True:
                     probable_atp8.append(seq[i:j])
     return probable_atp8
 
-def main(seq_number):
-    filename = 'gene_information.gbk'
+def main():
+    filename = 'uploads\\gene_information.gbk'
     record = SeqIO.read(filename, 'genbank')
     # 判断ATP8是否已经标注
     for feature in record.features:
@@ -99,19 +99,20 @@ def main(seq_number):
     for i in range(len(index_list)):
         ref_index_list_p[i][0]=index_list[i][0]+5
         ref_index_list_p[i][1]=index_list[i][1]-5
-
-    # index_list_n=np.array(index_list)
-    # for i in range(len(index_list_n)):
-    #     for j in range(len(index_list_n[i])):
-    #         index_list_n[i][j]=len(seq)-index_list_n[i][j]+1
-    # ref_index_list_n=np.zeros(index_list.shape)
-    # for i in range(len(index_list)):
-    #     ref_index_list_n[i][0] = len(seq)-index_list_n[i][0]+5
-    #     ref_index_list_n[i][1] = index_list_n[i][1]-5
+    
     ref_index_list_n=np.zeros(index_list.shape)
     for i in range(len(index_list)):
         ref_index_list_n[i][0] = len(seq)-1-index_list[i][1]+5
         ref_index_list_n[i][1] = len(seq)-1-index_list[i][0]-5
+    
+    # index_list_n=np.array(index_list)
+    # for i in range(len(index_list_n)):
+    #     for j in range(len(index_list_n[i])):
+    #         index_list_n[i][j]=len(seq)-index_list_n[i][j]-1
+    # ref_index_list_n=np.zeros(index_list.shape)
+    # for i in range(len(index_list)):
+    #     ref_index_list_n[i][0]=index_list_n[i][0]+5
+    #     ref_index_list_n[i][1]=index_list_n[i][1]-5
     
     # 读取参考序列
     references = SeqIO.parse('reference.fa', 'fasta')
@@ -174,12 +175,15 @@ def main(seq_number):
         atp8 = atp8_p
         atp8_start = atp8_p_start
         atp8_end = atp8_p_end
+        max_similiar = sp
     else:
         strand = -1
         flag = '-'
         atp8 = atp8_n
         atp8_start = atp8_n_start
         atp8_end = atp8_n_end
+        max_similiar = sn
+    print(max_similiar, end=' ')
     visualize1(record, atp8_start, atp8_end, strand)
     return "ATP8 on "+flag+"  :", str(atp8), 'The ATP8 index is :'+str(atp8_start+1)+'-'+str(atp8_end)
 

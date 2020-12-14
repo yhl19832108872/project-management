@@ -21,6 +21,7 @@ app.secret_key="dasdas"
 app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///' + os.path.join(base_dir, 'data.sqlite') # 配置数据库的地址
 app.config ['UPLOAD_FOLDER'] = PEOPLE_FOLDER
 app.config["SQLALCHEMY_COMMIT_ON_TEARDOWN"] = False
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
@@ -77,7 +78,7 @@ def submit():
         if seqId:
             process.write_gbk(seqId)
             print(seqId)
-            strand, seq, position = process.main(seqId)
+            strand, seq, position = process.main()
             # img_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'visualize.png')
             return render_template('result.html', strand=strand, seq=seq, position=position)
         # 用户输入文件
@@ -90,7 +91,7 @@ def submit():
             if filename.lower().endswith('.gbk') or filename.lower().endswith('.gb'):
                 print('gbk文件可视化')
                 visualize3(filepath)
-                return render_template('result1.html') # 待修改
+                return render_template('result1.html')
             elif filename.lower().endswith('.fasta') or filename.lower().endswith('.fa') or filename.lower().endswith('.txt'):
                 print("单基因序列文件可视化")
                 f = open(os.path.join(UPLOAD_PATH, 'fastas.txt'), 'w')
@@ -120,6 +121,7 @@ def fail():
     return render_template('fail.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # app.run(debug=True)
+    app.run()
     db.create_all()
 

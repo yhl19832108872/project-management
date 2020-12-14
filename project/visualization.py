@@ -28,12 +28,14 @@ def visualize1(record, atp8_start, atp8_end, strand):
     gd_diagram.draw(format='circular', circular=True, pagesize=(30 * cm, 30 * cm), start=0, end=len(record),
                     circle_core=0.7)
     gd_diagram.write('.\\static\\visualize.pdf', "PDF")
+    gd_diagram.write('.\\static\\visualize.png', "PNG")
     
 def visualize2(record):
     gd_diagram, gd_feature_set = visualize(record)
     gd_diagram.draw(format='circular', circular=True, pagesize=(30 * cm, 30 * cm), start=0, end=len(record),
                     circle_core=0.7)
     gd_diagram.write('.\\static\\visualize.pdf', "PDF")
+    gd_diagram.write('.\\static\\visualize.png', "PNG")
     
 def visualize3(filename):
     record = SeqIO.read(filename, 'genbank')
