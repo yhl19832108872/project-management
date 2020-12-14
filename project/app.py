@@ -1,13 +1,20 @@
-from flask import Flask, render_template, request, redirect
+#encoding:utf-8
+
+from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 import os
 import process
 from werkzeug.utils import secure_filename
 from visualization import visualize3
+from pypinyin import lazy_pinyin
+import dash_bio
+from dash import Dash
+import dash_html_components as html
+from werkzeug.middleware.dispatcher import DispatcherMiddleware
 
 base_dir = os.path.abspath(os.path.dirname(__file__))
-PEOPLE_FOLDER = os.path.join('static','people_photo')
-UPLOAD_PATH = os.path.dirname(__file__)
+PEOPLE_FOLDER = os.path.join('static', 'people_photo')
+UPLOAD_PATH = os.path.join(os.path.dirname(__file__), 'uploads')
 app = Flask(__name__)
 app.secret_key="dasdas"
 
@@ -20,7 +27,6 @@ db = SQLAlchemy(app)
 class User(db.Model):
     # 定义表名
     __tablename__ = 'users'
-    
     # 定义字段
     user_name = db.Column(db.String(64),)
     user_email=db.Column(db.String(30), primary_key=True)
@@ -70,23 +76,42 @@ def submit():
         # 用户输入序列号
         if seqId:
             process.write_gbk(seqId)
+            print(seqId)
             strand, seq, position = process.main(seqId)
             # img_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'visualize.png')
             return render_template('result.html', strand=strand, seq=seq, position=position)
         # 用户输入文件
         elif seq:
-            filename = secure_filename(seq.filename)
+            filename = secure_filename(''.join(lazy_pinyin(seq.filename)))
             print(filename)
-            seq.save(os.path.join(UPLOAD_PATH, filename))
+            filepath = os.path.join(UPLOAD_PATH, filename)
+            seq.save(filepath)
             print('文件上传成功')
-            if filename.lower().endswith('.fasta') or filename.lower().endswith('.fa'):
-                print("fasta文件可视化")
-            if filename.lower().endswith('.gbk') or filename.lower().endswith('.genbank'):
+            if filename.lower().endswith('.gbk') or filename.lower().endswith('.gb'):
                 print('gbk文件可视化')
-                visualize3(filename)
+                visualize3(filepath)
                 return render_template('result1.html') # 待修改
-        
+            elif filename.lower().endswith('.fasta') or filename.lower().endswith('.fa') or filename.lower().endswith('.txt'):
+                print("单基因序列文件可视化")
+                f = open(os.path.join(UPLOAD_PATH, 'fastas.txt'), 'w')
+                filetext = open(filepath).read()
+                # f.truncate()
+                f.write(filetext)
+                f.close()
+                return redirect(url_for('visual_fa'))
     return render_template('submit.html')
+
+filepath = os.path.join(UPLOAD_PATH, 'fastas.txt')
+data = open(filepath, 'r').read()
+style = ["https://codepen.io/chriddyp/pen/bWLwgP.css"]
+dash_app = Dash(__name__, server=app, url_base_pathname='/visual_fa/', external_stylesheets=style)
+dash_app.layout = html.Div([
+dash_bio.AlignmentChart(id="my_alignemnt", data=data),
+    html.Div(id='alignment-Viewer-output')])
+application = DispatcherMiddleware(app, {'/dash': dash_app.server})
+@app.route('/visual_fa')
+def visual_fa():
+    return redirect('/dash')
 
 # 注册/登录失败
 @app.route('/fail',methods=['GET','POST'])
@@ -95,6 +120,6 @@ def fail():
     return render_template('fail.html')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
     db.create_all()
 

@@ -10,10 +10,10 @@ def score(seq1,seq2):
 
 def write_gbk(seq_number):
     filename = 'MitoGenPlatyhelminthes.gbk'
-    with open(filename,'r') as f:
+    with open(filename, 'r') as f:
         data=f.read()
     information=re.search('LOCUS       '+seq_number+'(.*?)//',str(data),re.S).group()
-    with open('gene_information.gbk','w') as f:
+    with open('gene_information.gbk', 'w') as f:
         f.write(information)
 
 def get_index_list(record):
@@ -99,15 +99,19 @@ def main(seq_number):
     for i in range(len(index_list)):
         ref_index_list_p[i][0]=index_list[i][0]+5
         ref_index_list_p[i][1]=index_list[i][1]-5
-    
-    index_list_n=np.array(index_list)
-    for i in range(len(index_list_n)):
-        for j in range(len(index_list_n[i])):
-            index_list_n[i][j]=len(seq)-index_list_n[i][j]+1
+
+    # index_list_n=np.array(index_list)
+    # for i in range(len(index_list_n)):
+    #     for j in range(len(index_list_n[i])):
+    #         index_list_n[i][j]=len(seq)-index_list_n[i][j]+1
+    # ref_index_list_n=np.zeros(index_list.shape)
+    # for i in range(len(index_list)):
+    #     ref_index_list_n[i][0] = len(seq)-index_list_n[i][0]+5
+    #     ref_index_list_n[i][1] = index_list_n[i][1]-5
     ref_index_list_n=np.zeros(index_list.shape)
     for i in range(len(index_list)):
-        ref_index_list_n[i][0]=index_list_n[i][0]+5
-        ref_index_list_n[i][1]=index_list_n[i][1]-5
+        ref_index_list_n[i][0] = len(seq)-1-index_list[i][1]+5
+        ref_index_list_n[i][1] = len(seq)-1-index_list[i][0]-5
     
     # 读取参考序列
     references = SeqIO.parse('reference.fa', 'fasta')
