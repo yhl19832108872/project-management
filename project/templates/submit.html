@@ -214,7 +214,10 @@ body {
             <input type="submit" value="Submit">
         </div>
     </form>
-
+<div id="footer">
+  <p>You can input a Sequence id of the Platyhelminthes. Then you will get the ATP8 gene and the result of genome visualization.</p>
+  <p>You can also upload a GENBANK or FASTA file. For a Genbank file, you will get the result of genome visualization directly. And for a Fasta file, you will get the result of sequence alignments.</p>
+</div>
     <canvas style=" width: 100%; height: 100%; position: absolute; top:-100px; z-index: -1;" id="canvas"></canvas>
     <script type="text/JavaScript" src="{{ url_for('static',filename='script0.js') }}"></script>
     <script type="text/javascript" src="./static/main.js"></script> 
