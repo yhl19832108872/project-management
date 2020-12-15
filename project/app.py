@@ -76,9 +76,9 @@ def submit():
         seq = request.files.get('seq')
         # 用户输入序列号
         if seqId:
-            process.write_gbk(seqId)
+            # process.write_gbk(seqId)
             print(seqId)
-            strand, seq, position = process.main()
+            strand, seq, position = process.main(seqId)
             # img_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'visualize.png')
             return render_template('result.html', strand=strand, seq=seq, position=position)
         # 用户输入文件
@@ -121,7 +121,7 @@ def fail():
     return render_template('fail.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
-    #app.run()
+    # app.run(debug=True)
+    app.run()
     db.create_all()
 
