@@ -2,6 +2,7 @@ import numpy as np
 from Bio.SeqUtils import GC
 from Bio import pairwise2, SeqIO
 import os
+import re
 from visualization import visualize1, visualize2
 
 def score(seq1,seq2):
@@ -9,13 +10,13 @@ def score(seq1,seq2):
     return (alignments[0].score / alignments[0].end) * 100
     # return alignments[0].score
 
-# def write_gbk(seq_number):
-#     filename = 'MitoGenPlatyhelminthes.gbk'
-#     with open(filename,'r') as f:
-#         data=f.read()
-#     information=re.search('LOCUS       '+seq_number+'(.*?)//',str(data),re.S).group()
-#     with open('uploads\\gene_information.gbk','w') as f:
-#         f.write(information)
+def write_gbk(seq_number):
+    filename = 'MitoGenPlatyhelminthes.gbk'
+    with open(filename,'r') as f:
+        data=f.read()
+    information=re.search('LOCUS       '+seq_number+'(.*?)//',str(data),re.S).group()
+    with open('uploads\\gene_information.gbk','w') as f:
+        f.write(information)
 
 def get_index_list(record):
     seq = record.seq
@@ -74,8 +75,9 @@ def get_pro_atp8(seq,starts,ends,ref_index_list,Reading_box=0):
                     probable_atp8.append(seq[i:j])
     return probable_atp8
 
-def main(seqId):
-    filename = os.path.join('datasets', seqId+'.gbk')
+def main():
+    # filename = os.path.join('datasets', seqId+'.gbk')
+    filename = os.path.join('uploads\\gene_information.gbk')
     record = SeqIO.read(filename, 'genbank')
     # 判断ATP8是否已经标注
     for feature in record.features:
@@ -115,7 +117,7 @@ def main(seqId):
     #     ref_index_list_n[i][1]=index_list_n[i][1]-5
     
     # 读取参考序列
-    references = SeqIO.parse('datasets\\reference.fa', 'fasta')
+    references = SeqIO.parse('reference.fa', 'fasta')
     references = list(references)
     
     # 计算参考序列权重

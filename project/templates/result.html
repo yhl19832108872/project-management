@@ -119,14 +119,14 @@ div.hidden-box{width:133px;position:absolute;display:none;background:#315565  to
 				font-size: 18px;
 			}
 			#pic{
-				width: 400px;
+				width: 500px;
 				height: 400px;
 				display: inline-block;
 				/*margin-top: 50px;*/
 				margin-left: 45px;
 				position: absolute;
 				top: 200px;
-				background:url('static/visualize.png') no-repeat;
+				background:url('static/images/timg2.png') no-repeat;
 				/*background-size:100% 100%;*/
 				/*background: url({{url_for('static', filename='visualize.png')}}) no-repeat;*/
 				background-size: 100% 100%;
@@ -156,11 +156,11 @@ div.hidden-box{width:133px;position:absolute;display:none;background:#315565  to
 			li a:hover{
 				background:#fff ; color:#be4355
 			}
-			#sp{
+			/*#sp{
 				position: absolute;
 				top: 650px;
 				left: 1000px;
-			}
+			}*/
 </style>
     <script>
         window.requestAnimFrame = (function() {
@@ -249,9 +249,9 @@ div.hidden-box{width:133px;position:absolute;display:none;background:#315565  to
 				</div>
 				<div id="pic">
 				</div>
-				<span id='sp'>This is just an example, may not right.</span>
+				<!-- <span id='sp'>This is just an example, may not right.</span> -->
 				<div id="image">
-					<p>Results of genome visualization: <a href={{url_for('static', filename='visualize.pdf')}} download="visualize.pdf" style="text-decoration:none">Download file</a></p>
+					<p>Results of genome visualization: <a href={{path}} download="visualize.pdf" style="text-decoration:none">Download file</a></p>
 				</div>
 			</div>
 		</div>

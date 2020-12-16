@@ -27,22 +27,23 @@ def visualize1(record, atp8_start, atp8_end, strand):
     gd_feature_set.add_feature(atp8_feature, color=colors.lightblue, label=True, label_position='middle')
     gd_diagram.draw(format='circular', circular=True, pagesize=(30 * cm, 30 * cm), start=0, end=len(record),
                     circle_core=0.7)
-    gd_diagram.write('.\\visualize\\visualize_'+record.id.split('.')[0]+'.pdf', "PDF")
-    gd_diagram.write('.\\visualize\\visualize_'+record.id.split('.')[0]+'.png', "PNG")
+    gd_diagram.write('.\\static\\visualize_'+record.id.split('.')[0]+'.pdf', "PDF")
+    gd_diagram.write('.\\static\\visualize_'+record.id.split('.')[0]+'.png', "PNG")
     
 def visualize2(record):
     gd_diagram, gd_feature_set = visualize(record)
     gd_diagram.draw(format='circular', circular=True, pagesize=(30 * cm, 30 * cm), start=0, end=len(record),
                     circle_core=0.7)
-    gd_diagram.write('.\\visualize\\visualize_'+record.id.split('.')[0]+'.pdf', "PDF")
-    gd_diagram.write('.\\visualize\\visualize_'+record.id.split('.')[0]+'.png', "PNG")
+    gd_diagram.write('.\\static\\visualize_'+record.id.split('.')[0]+'.pdf', "PDF")
+    gd_diagram.write('.\\static\\visualize_'+record.id.split('.')[0]+'.png', "PNG")
     
 def visualize3(filename):
     record = SeqIO.read(filename, 'genbank')
     gd_diagram, gd_feature_set = visualize(record)
     gd_diagram.draw(format='circular', circular=True, pagesize=(30 * cm, 30 * cm), start=0, end=len(record),
                     circle_core=0.7)
-    gd_diagram.write('.\\visualize\\visualize1_'+record.id.split('.')[0]+'.pdf', "PDF")
-    gd_diagram.write('.\\visualize\\visualize1_'+record.id.split('.')[0]+'.png', "PNG")
+    gd_diagram.write('.\\static\\visualize1_'+record.id.split('.')[0]+'.pdf', "PDF")
+    gd_diagram.write('.\\static\\visualize1_'+record.id.split('.')[0]+'.png', "PNG")
+    return record.id.split('.')[0]
     
     

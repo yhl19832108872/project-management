@@ -122,7 +122,18 @@ body {
       li a:hover{
         background:#fff ; color:#be4355
       }
-
+      #footer_wrap{
+        height: 200px;
+        width: 100%;
+      }
+      #footer{
+        height: 200px;
+        width: 1200px;
+        margin: 0px auto;
+      }
+      #footer p{
+        margin-top: 10px;
+      }
 </style>
     <script>
         window.requestAnimFrame = (function() {
@@ -214,9 +225,11 @@ body {
             <input type="submit" value="Submit">
         </div>
     </form>
-<div id="footer">
-  <p>You can input a Sequence id of the Platyhelminthes. Then you will get the ATP8 gene and the result of genome visualization.</p>
-  <p>You can also upload a GENBANK or FASTA file. For a Genbank file, you will get the result of genome visualization directly. And for a Fasta file, you will get the result of sequence alignments.</p>
+<div id="footer_wrap">
+  <div id="footer">
+    <p style="padding-top:100px;"><b>Input a Sequence id:</b> You can input a Sequence id of the Platyhelminthes. Then you will get the ATP8 gene and the result of genome visualization.</p>
+    <p><b>Upload file:</b> You can also upload a GENBANK or FASTA file. For a Genbank file, you will get the result of genome visualization directly. And for a Fasta file, you will get the result of sequence alignments.</p>
+  </div>
 </div>
     <canvas style=" width: 100%; height: 100%; position: absolute; top:-100px; z-index: -1;" id="canvas"></canvas>
     <script type="text/JavaScript" src="{{ url_for('static',filename='script0.js') }}"></script>

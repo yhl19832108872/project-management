@@ -33,7 +33,6 @@ class User(db.Model):
     user_email=db.Column(db.String(30), primary_key=True)
     user_password = db.Column(db.String(30))
 
-
 # 首页
 @app.route('/')
 def welcome():
@@ -78,21 +77,20 @@ def submit():
         # 用户输入序列号
         if seqId:
             process.write_gbk(seqId)
-            print(seqId)
             strand, seq, position = process.main()
             # img_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'visualize.png')
-            return render_template('result.html', strand=strand, seq=seq, position=position)
+            path = os.path.join("static", 'visualize_'+seqId+'.pdf')
+            return render_template('result.html', strand=strand, seq=seq, position=position, path=path)
         # 用户输入文件
         elif seq:
             filename = secure_filename(''.join(lazy_pinyin(seq.filename)))
             print(filename)
             filepath = os.path.join(UPLOAD_PATH, filename)
             seq.save(filepath)
-            print('文件上传成功')
             if filename.lower().endswith('.gbk') or filename.lower().endswith('.gb'):
-                print('gbk文件可视化')
-                visualize3(filepath)
-                return render_template('result1.html')
+                seqId = visualize3(filepath)
+                path = os.path.join('static', 'visualize1_'+seqId+'.pdf')
+                return render_template('result1.html', path=path)
             elif filename.lower().endswith('.fasta') or filename.lower().endswith('.fa') or filename.lower().endswith('.txt'):
                 print("单基因序列文件可视化")
                 f = open(os.path.join(UPLOAD_PATH, 'fastas.txt'), 'w')
