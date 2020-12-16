@@ -33,6 +33,7 @@ class User(db.Model):
     user_email=db.Column(db.String(30), primary_key=True)
     user_password = db.Column(db.String(30))
 
+
 # 首页
 @app.route('/')
 def welcome():
